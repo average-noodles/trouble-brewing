@@ -1,0 +1,179 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://World/Brightwood Floor.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Wall Tile Set/tileset_Wall Tile Set.tres" type="TileSet" id=3]
+[ext_resource path="res://Logic/DialogBox/Dialog_Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/World.gd" type="Script" id=5]
+[ext_resource path="res://UI/Clock/Clock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Counter.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Fence Tile Set/tileset_Fence Tile Set.tres" type="TileSet" id=8]
+[ext_resource path="res://World/Table.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/WallTextureRect.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World/Grass.png" type="Texture" id=11]
+[ext_resource path="res://World/Sidewalk.png" type="Texture" id=12]
+[ext_resource path="res://World/WelcomeRugTextureRect.tscn" type="PackedScene" id=13]
+[ext_resource path="res://World/Brick Tile Set/tileset_Brick Tile Set.tres" type="TileSet" id=14]
+[ext_resource path="res://World/BrickTextureRect.tscn" type="PackedScene" id=15]
+[ext_resource path="res://UI/PauseMenu.tscn" type="PackedScene" id=16]
+[ext_resource path="res://UI/GodMenu.tscn" type="PackedScene" id=18]
+[ext_resource path="res://World/Main Enterance.tscn" type="PackedScene" id=19]
+[ext_resource path="res://World/BackDoor.tscn" type="PackedScene" id=20]
+[ext_resource path="res://World/DirtGarden.tscn" type="PackedScene" id=21]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 296, 338, 0, 0, 0, 0, 296, 52, 0, 0, 0, 0, 270, 52, 0, 0, 0, 0, 258, 52, 0, 0, 0, 0, 248, 52, 0, 0, 0, 0, 248, 18 )
+}
+
+[node name="World" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="GrassTextureRect" type="TextureRect" parent="."]
+margin_right = 320.0
+margin_bottom = 372.0
+texture = ExtResource( 11 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FloorTextureRect" type="TextureRect" parent="."]
+margin_left = 16.0
+margin_right = 270.0
+margin_bottom = 180.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WelcomeRugTextureRect" parent="." instance=ExtResource( 13 )]
+margin_left = 42.0
+margin_top = 160.0
+margin_right = 74.0
+margin_bottom = 176.0
+
+[node name="WallTextureRect" parent="." instance=ExtResource( 10 )]
+margin_left = 32.0
+margin_top = 16.0
+margin_right = 256.0
+margin_bottom = 64.0
+
+[node name="BrickTextureRect" parent="." instance=ExtResource( 15 )]
+margin_left = 16.0
+margin_top = 208.0
+margin_right = 272.0
+margin_bottom = 256.0
+
+[node name="SidewalkNorthTextureRect" type="TextureRect" parent="."]
+margin_left = 288.0
+margin_right = 304.0
+margin_bottom = 372.0
+texture = ExtResource( 12 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SidewalkLRTextureRect" type="TextureRect" parent="SidewalkNorthTextureRect"]
+margin_left = 2.0
+margin_top = 96.0
+margin_right = 18.0
+margin_bottom = 115.0
+rect_rotation = 90.0
+texture = ExtResource( 12 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackDoor" parent="." instance=ExtResource( 20 )]
+position = Vector2( 58, 236 )
+
+[node name="MainEnterance" parent="." instance=ExtResource( 19 )]
+
+[node name="DirtGarden" parent="." instance=ExtResource( 21 )]
+position = Vector2( 56, 328 )
+
+[node name="DirtGarden2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 144, 328 )
+
+[node name="DirtGarden3" parent="." instance=ExtResource( 21 )]
+position = Vector2( 232, 328 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 148, 162 )
+
+[node name="VelmiPath2D" type="Path2D" parent="YSort"]
+position = Vector2( 0, 54 )
+curve = SubResource( 1 )
+
+[node name="Counter" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 148, 132 )
+
+[node name="Table" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 88, 64 )
+
+[node name="Table2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 184, 64 )
+
+[node name="Table3" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 232, 64 )
+
+[node name="Table4" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 136, 64 )
+
+[node name="Table5" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 40, 64 )
+
+[node name="WallTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 1, 0, 4, 2, 0, 196609, 3, 0, 196609, 4, 0, 196609, 5, 0, 196609, 6, 0, 196609, 7, 0, 196609, 8, 0, 196609, 9, 0, 196609, 10, 0, 196609, 11, 0, 196609, 12, 0, 196609, 13, 0, 196609, 14, 0, 196609, 15, 0, 196609, 16, 0, 7, 65537, 0, 65539, 65552, 0, 65539, 131073, 0, 65539, 131088, 0, 65539, 196609, 0, 65539, 196624, 0, 65539, 262145, 0, 65539, 262160, 0, 65539, 327681, 0, 65539, 327696, 0, 65539, 393217, 0, 65539, 393232, 0, 65539, 458753, 0, 65539, 458768, 0, 65539, 524289, 0, 65539, 524304, 0, 65539, 589825, 0, 65539, 589840, 0, 65539, 655361, 0, 65539, 655376, 0, 65539, 720897, 0, 196612, 720898, 0, 196609, 720899, 0, 196609, 720900, 0, 196609, 720901, 0, 196609, 720902, 0, 196609, 720903, 0, 196609, 720904, 0, 196609, 720905, 0, 196609, 720906, 0, 196609, 720907, 0, 196609, 720908, 0, 196609, 720909, 0, 196609, 720910, 0, 196609, 720911, 0, 196609, 720912, 0, 196615 )
+
+[node name="FenceTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 983041, 0, 3, 983056, 0, 3, 1048577, 0, 65539, 1048592, 0, 65539, 1114113, 0, 65539, 1114128, 0, 65539, 1179649, 0, 65539, 1179664, 0, 65539, 1245185, 0, 65539, 1245200, 0, 65539, 1310721, 0, 65539, 1310736, 0, 65539, 1376257, 0, 65539, 1376272, 0, 65539, 1441793, 0, 196612, 1441794, 0, 196609, 1441795, 0, 196609, 1441796, 0, 196609, 1441797, 0, 196609, 1441798, 0, 196609, 1441799, 0, 196609, 1441800, 0, 196609, 1441801, 0, 196609, 1441802, 0, 196609, 1441803, 0, 196609, 1441804, 0, 196609, 1441805, 0, 196609, 1441806, 0, 196609, 1441807, 0, 196609, 1441808, 0, 196615 )
+
+[node name="BrickTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 14 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 786433, 0, 196608, 786434, 0, 196609, 786435, 0, 196609, 786436, 0, 196609, 786437, 0, 196609, 786438, 0, 196609, 786439, 0, 196609, 786440, 0, 196609, 786441, 0, 196609, 786442, 0, 196609, 786443, 0, 196609, 786444, 0, 196609, 786445, 0, 196609, 786446, 0, 196609, 786447, 0, 196609, 786448, 0, 196610 )
+
+[node name="Clock" parent="." instance=ExtResource( 6 )]
+margin_left = 288.0
+margin_top = 162.0
+margin_right = 288.0
+margin_bottom = 162.0
+
+[node name="Dialog_Player" parent="." instance=ExtResource( 4 )]
+margin_left = 176.0
+margin_top = 178.0
+margin_right = 176.0
+margin_bottom = 178.0
+
+[node name="BackyardCamera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 282 )
+
+[node name="StoreCamera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 90 )
+current = true
+
+[node name="PauseMenu" parent="." instance=ExtResource( 16 )]
+margin_left = -18.0
+margin_top = -16.0
+margin_right = 22.0
+margin_bottom = 24.0
+
+[node name="Node2D" parent="." instance=ExtResource( 18 )]
+margin_left = 102.0
+margin_top = 94.0
+margin_right = 102.0
+margin_bottom = 94.0

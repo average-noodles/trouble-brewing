@@ -1,0 +1,64 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"DialogPlayer/Test": 1
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "This is a test script to see what talking looks like",
+"name": "DialogPlayer/Test",
+"nodes": {
+1: {
+"graph_offset": Vector2( 140, 20 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Player</speaker>
+<dialog>Hey what's up?</dialog>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 600, 20 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Velmi</speaker>
+<dialog>Not much my dude</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1060, 20 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( -320, 20 ),
+"links": {
+0: 1
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+}
+}
+}
+}
+available_dids = [ 2 ]
+groups = [  ]

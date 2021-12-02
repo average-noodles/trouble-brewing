@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI/Clock/Clock.gd" type="Script" id=1]
+[ext_resource path="res://UI/Clock/Clock.png" type="Texture" id=2]
+[ext_resource path="res://UI/Clock/Clock Numbers.png" type="Texture" id=3]
+[ext_resource path="res://UI/Clock/Clock Dots.png" type="Texture" id=4]
+[ext_resource path="res://UI/Clock/Clock Meridian.png" type="Texture" id=5]
+[ext_resource path="res://UI/Clock/Clock Days.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "DotFlash"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Clock_Dots:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[node name="Clock" type="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -53.4423
+margin_top = -34.0211
+margin_right = -5.44226
+margin_bottom = -6.02109
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Clock" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 290.558, 159.979 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Hour_One" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 274.558, 157.979 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 10
+
+[node name="Hour_Two" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 284.558, 157.979 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 10
+
+[node name="Minute_One" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 296.558, 157.979 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 10
+
+[node name="Minute_Two" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 306.558, 157.979 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 10
+
+[node name="Clock_Dots" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 290.558, 157.979 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "DotFlash"
+anims/DotFlash = SubResource( 1 )
+
+[node name="Meridiem" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 309.869, 167.464 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+hframes = 2
+frame = 1
+
+[node name="ClockDays" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 284, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+hframes = 14

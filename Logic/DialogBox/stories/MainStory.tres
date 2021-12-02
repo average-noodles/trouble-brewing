@@ -1,0 +1,97 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"velmi_day_1": 1
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "velmi_day_1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, 40 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Velmi</speaker>
+<dialog>Oh! Hi. I didn't see you there...</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, 40 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Velmi</speaker>
+<dialog>...</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1420, 40 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Velmi</speaker>
+<dialog>Oh shoot. I should probably say something. I'm Velmi.</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 1880, 40 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Velmi</speaker>
+<dialog>Oh! you're <variable>name</variable>. MalcolmsaidyouweretakingoverthisplacewhichissuperawesomecuzIlikereadinghereand...</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 2340, 40 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Velmi</speaker>
+<dialog>Oh sorry I'm rambling. Sorry...</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 2800, 40 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+}
+}
+available_dids = [  ]
+groups = [  ]

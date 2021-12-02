@@ -1,0 +1,42 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_BakedStory/EXP_BakedStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Baked_Story"
+story = {
+1: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<speaker>Player</speaker>
+<dialog>Hey what's up?</dialog>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Not much my dude</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+},
+4: {
+"links": {
+0: 1
+},
+"text": "<start>"
+}
+}
+}
+}
+names = {
+"DialogPlayer/Test": 1
+}

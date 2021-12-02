@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/GodMenu.gd" type="Script" id=1]
+
+[node name="Node2D" type="Control"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+margin_left = 160.0
+margin_top = 84.0
+margin_right = 232.0
+margin_bottom = 124.0
+window_title = "Day"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/WindowDialog"]
+margin_top = 16.0
+margin_right = 72.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -21,7 +21,7 @@ func _process(delta):
 		interaction_dict["interacted_today"] = false
 		npc_dict["interaction"] = interaction_dict
 		game_state_controller.update_data("npcs",npc_name,npc_dict)
-	dialog = "velmi_interaction_" + String(interaction_dict["total_interactions"])
+	dialog = npc_name + "_interaction_" + String(interaction_dict["total_interactions"])
 # Called when the node enters the scene tree for the first time.
 func receive_interaction() -> void:
 	if not interaction_dict["interacted_today"]:

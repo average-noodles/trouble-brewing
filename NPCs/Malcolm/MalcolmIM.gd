@@ -10,7 +10,7 @@ onready var game_state_controller = get_node("/root/GameStateController")
 var dialog = ""
 var interaction_dict = {}
 var npc_dict = {}
-var npc_name = "Malcolm"
+var npc_name = "Velmi"
 
 func _ready():
 	npc_dict = game_state_controller.get_data(npc_name)

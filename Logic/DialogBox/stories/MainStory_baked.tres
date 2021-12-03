@@ -56,8 +56,32 @@ story = {
 "text": "<end>"
 }
 }
+},
+2: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<body>Hey this is interaction 2</body>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
 }
 }
 names = {
-"velmi_day_1": 1
+"velmi_interaction_1": 1,
+"velmi_interaction_2": 2
 }

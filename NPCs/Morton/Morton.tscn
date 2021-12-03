@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Logic/InteractionManager.tscn" type="PackedScene" id=1]
-[ext_resource path="res://NPCs/Velmi/Velmi.png" type="Texture" id=2]
-[ext_resource path="res://NPCs/Velmi/VelmiIM.gd" type="Script" id=3]
-[ext_resource path="res://NPCs/Velmi/VelmiPathFollow2D.gd" type="Script" id=4]
+[ext_resource path="res://NPCs/Morton/MortonPathFollow2D.gd" type="Script" id=2]
+[ext_resource path="res://NPCs/Morton/MortonIM.gd" type="Script" id=3]
+[ext_resource path="res://NPCs/Morton/Morton.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.72313
@@ -14,7 +14,7 @@ resource_name = "IdleDown"
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -31,7 +31,7 @@ resource_name = "IdleLeft"
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -47,7 +47,7 @@ tracks/0/keys = {
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -63,7 +63,7 @@ tracks/0/keys = {
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -79,7 +79,7 @@ tracks/0/keys = {
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -95,7 +95,7 @@ tracks/0/keys = {
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -111,7 +111,7 @@ tracks/0/keys = {
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -128,7 +128,7 @@ resource_name = "RunUp"
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("VelmiSprite:frame")
+tracks/0/path = NodePath("MortonSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -140,12 +140,12 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[node name="VelmiKinematicBody2D" type="KinematicBody2D"]
-script = ExtResource( 4 )
+[node name="MortonKinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
-[node name="VelmiSprite" type="Sprite" parent="."]
+[node name="MortonSprite" type="Sprite" parent="."]
 position = Vector2( 0.154121, -6.95369 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 hframes = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

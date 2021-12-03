@@ -8,8 +8,114 @@ var default_data = {
 		"name": "default",
 		"money": 1000,
 	},
-	"date_started" : [1,1,2020],
-	"garden": {}
+	"date_started" : {
+		"day": -1,
+		"month": -1,
+		"year": -1,
+	},
+	"garden": {},
+	"npcs": {
+#		"Betsy": {
+#			"time": {
+#				"in_time": 500,
+#				"out_time": 100000
+#			},
+#			"final_animation": "IdleLeft",
+#			"file_location": "res://NPCs/Velmi/Velmi.tscn",
+#			"npc_path": "YSort/VelmiPath2D",
+#			"interaction": {
+#				"interacted_today": false,
+#				"last_interacted": {
+#					"day": -1,
+#					"month": -1,
+#					"year": -1,
+#				},
+#				"total_interactions": 0
+#			},
+#		},
+		"Malcolm": {
+			"time": {
+				"in_time": 0,
+				"out_time": 100000
+			},
+			"final_animation": "IdleLeft",
+			"file_location": "res://NPCs/Malcolm/Malcolm.tscn",
+			"npc_path": "NPCsPath/MalcolmPath2D/PathFollow2D",
+			"ysort_path": "/root/World/YSort/MalcolmKinematicBody2D",
+			"interaction": {
+				"interacted_today": false,
+				"last_interacted": 0,
+				"total_interactions": 0
+			}
+		},
+		"Morton": {
+			"time": {
+				"in_time": 109,
+				"out_time": 100000
+			},
+			"final_animation": "IdleDown",
+			"file_location": "res://NPCs/Morton/Morton.tscn",
+			"npc_path": "NPCsPath/MortonPath2D/PathFollow2D",
+			"ysort_path": "/root/World/YSort/MortonKinematicBody2D",
+			"interaction": {
+				"interacted_today": false,
+				"last_interacted": 1,
+				"total_interactions": 1
+			}
+		},
+#		"Saleman": {
+#			"time": {
+#				"in_time": 500,
+#				"out_time": 100000
+#			},
+#			"final_animation": "IdleLeft",
+#			"file_location": "res://NPCs/Velmi/Velmi.tscn",
+#			"npc_path": "YSort/VelmiPath2D",
+#			"interaction": {
+#				"interacted_today": false,
+#				"last_interacted": {
+#					"day": -1,
+#					"month": -1,
+#					"year": -1,
+#				},
+#				"total_interactions": 0
+#			}
+#		},
+#		"Crow": {
+#			"time": {
+#				"in_time": 500,
+#				"out_time": 100000
+#			},
+#			"final_animation": "IdleLeft",
+#			"file_location": "res://NPCs/Velmi/Velmi.tscn",
+#			"npc_path": "YSort/VelmiPath2D",
+#			"interaction": {
+#				"interacted_today": false,
+#				"last_interacted": {
+#					"day": -1,
+#					"month": -1,
+#					"year": -1,
+#				},
+#				"total_interactions": 0
+#			}
+#		},
+		"Velmi": {
+			"time": {
+				"in_time": 0,
+				"out_time": 1000000
+			},
+			"final_animation": "IdleLeft",
+			"file_location": "res://NPCs/Velmi/Velmi.tscn",
+			"npc_path": "NPCsPath/VelmiPath2D/PathFollow2D",
+			"ysort_path": "/root/World/YSort/VelmiKinematicBody2D",
+			"interaction": {
+				"interacted_today": false,
+				"last_interacted": 0,
+				"total_interactions": 1
+			},
+		}
+	}
+		
 }
 
 var data = {}

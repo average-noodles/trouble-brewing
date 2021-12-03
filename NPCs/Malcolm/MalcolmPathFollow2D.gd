@@ -6,7 +6,7 @@ extends KinematicBody2D
 # var b = "text"
 onready var animation_player = get_node("AnimationPlayer")
 onready var door = get_node("/root/World/MainEnterance")
-onready var path_2d = get_node("/root/World/NPCsPath/VelmiPath2D/PathFollow2D")
+onready var path_2d = get_node("/root/World/NPCsPath/MalcolmPath2D/PathFollow2D")
 export var runSpeed = 20
 var enter = false
 var exit = false

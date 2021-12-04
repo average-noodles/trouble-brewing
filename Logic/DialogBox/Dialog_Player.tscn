@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Logic/DialogBox/fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Logic/DialogBox/textures/menu_section_9patch.png" type="Texture" id=2]
@@ -48,6 +48,22 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "PressSpaceBar"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+
 [node name="Dialog_Player" type="Control"]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -58,7 +74,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dialog_Box" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dialog_Box" type="Control" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -71,7 +89,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Body_NinePatchRect" type="NinePatchRect" parent="Dialog_Box"]
+[node name="Body_NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Dialog_Box"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -89,7 +107,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="Dialog_Box/Body_NinePatchRect"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -101,7 +119,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Body_Label" type="Label" parent="Dialog_Box/Body_NinePatchRect/MarginContainer"]
+[node name="Body_Label" type="Label" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect/MarginContainer"]
 margin_right = 688.0
 margin_bottom = 160.0
 size_flags_horizontal = 3
@@ -110,10 +128,10 @@ custom_fonts/font = SubResource( 1 )
 text = "Hello this is the text dialog"
 autowrap = true
 
-[node name="Body_AnimationPlayer" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
+[node name="Body_AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
 anims/TextDisplay = SubResource( 2 )
 
-[node name="Speaker_NinePatchRect" type="NinePatchRect" parent="Dialog_Box/Body_NinePatchRect"]
+[node name="Speaker_NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect"]
 margin_left = -21.6035
 margin_top = -18.4796
 margin_right = 158.396
@@ -128,7 +146,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Speaker_Label" type="Label" parent="Dialog_Box/Body_NinePatchRect/Speaker_NinePatchRect"]
+[node name="Speaker_Label" type="Label" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect/Speaker_NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = SubResource( 3 )
@@ -138,7 +156,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SpaceBar_NinePatchRect" type="NinePatchRect" parent="Dialog_Box/Body_NinePatchRect"]
+[node name="SpaceBar_NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -157,7 +175,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SpaceBar_Label" type="Label" parent="Dialog_Box/Body_NinePatchRect/SpaceBar_NinePatchRect"]
+[node name="SpaceBar_Label" type="Label" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect/SpaceBar_NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.5874
@@ -170,7 +188,54 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/SpaceBar_NinePatchRect"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect/SpaceBar_NinePatchRect"]
 autoplay = "PressSpaceBar"
 anims/PressSpaceBar = SubResource( 5 )
-[connection signal="animation_finished" from="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label/Body_AnimationPlayer" to="." method="_on_Body_AnimationPlayer_animation_finished"]
+
+[node name="Select_Choice" type="NinePatchRect" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -243.187
+margin_top = -40.0
+margin_right = 12.8127
+margin_bottom = 8.00003
+rect_scale = Vector2( 1.04578, 1.04578 )
+texture = ExtResource( 2 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select_Choice_Label" type="Label" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect/Select_Choice"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.5874
+margin_right = 1.5874
+custom_fonts/font = SubResource( 4 )
+text = "Select Choice"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect/Select_Choice"]
+autoplay = "PressSpaceBar"
+anims/PressSpaceBar = SubResource( 6 )
+
+[node name="Option_List" type="VBoxContainer" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -540.0
+margin_top = -60.0
+margin_bottom = -12.0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="CanvasLayer/Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label/Body_AnimationPlayer" to="." method="_on_Body_AnimationPlayer_animation_finished"]

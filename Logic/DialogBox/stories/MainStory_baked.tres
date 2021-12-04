@@ -67,12 +67,467 @@ story = {
 },
 2: {
 "links": {
+0: 4
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Oh, it's you again.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Sorry for being an awkward mess yesterday. I'm just not the most social person.</dialog>"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>You want to know what I am reading!?<dialog>"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>*hucks her book into her backpack*</dialog>"
+},
+7: {
+"links": {
 0: 3
 },
 "text": "<speaker>Velmi</speaker>
-<body>Hey this is interaction 2</body>"
+<dialog>Nothing at all!</dialog>"
+}
+}
 },
 3: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Hey <variable>name</variable>. You know you have a garden out back. You can plant things out there then turn those plants into special drinks.</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>You should really plant some ice cubes. Iced drinks are my favorite.</dialog>"
+},
+4: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+4: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Ugh! Why do integrals have to be so hard!</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Oh hey <variable>name</variable>. Sorry for being so loud. Calculas has me driving up the walls at home. Thought getting out might help me. It did not.</dialog>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Velmi</speaker>
+<dialog> I am usually an A+ type of college student, but math is my weakest link. Sometimes I will get help from Morton. It might not look like it, but he is a mechanical engineer.</dialog>"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>I know. It shocked me when I learned it for the first time to.</dialog>"
+},
+6: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+5: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog><variable>name</variable>. Can I ask for your help?</dialog>"
+},
+3: {
+"links": {
+0: 4,
+1: 5,
+2: 6
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>I have a Dungeons and Dragons session coming up, and I was wondering if you could help me pick out what class to play. I am stuck between paladin, rogue, and warlock.</dialog>
+<choiceJSON>{\"Paladin\": 0, \"Rogue\": 1, \"Warlock\": 2}</choiceJSON>"
+},
+4: {
+"links": {
+0: 7
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>I've never played a paladin before. I am gonna make her a bimbo. Thanks <variable>name</variable></dialog>"
+},
+5: {
+"links": {
+0: 7
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Rogue is my favorite DnD class, and I know what you are thinking. I have never played a lone wolf rogue character before because I have respect for my GM's time. Anyways, thanks for the help <variable>name</variable></dialog>"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Warlock, interesting choice. I kind of don't like the fact that they only get like zero spell slots. I feel like I spend so much of the game doing nothing. Maybe I can convince the GM to...</dialog>"
+},
+7: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+6: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>*Velmi rolls her eyes while she reads*</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Why does every gay romance book need to have its characters either questioning their sexuality or fighting for gay rights?</dialog>
+"
+},
+4: {
+"links": {
+0: 6,
+1: 5
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>I just want a book where two lesbians fall in love. Is that too much too ask!</dialog>
+<choiceJSON>{\"Maybe you should right your own book?\": 0, \"(remain silent)\": 1}</choiceJSON>"
+},
+5: {
+"links": {
+
+},
+"text": "<end>"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>AH!</dialog>"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>You shouldn't be eaves dropping on my inane mumbling. It's not very polite!</dialog>"
+},
+8: {
+"links": {
+0: 5
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>...but you are right. Maybe I should try writing my own book.</dialog>"
+}
+}
+},
+7: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>*Velmi seems lost in thought as she stares at a calculas textbook.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+8: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>I see another stranger has come to our world. Be careful of the blind ones.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+9: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3,
+1: 4,
+2: 5
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>Is your real name actually <variable>name</variable>?</dialog>
+<choiceJSON>{\"Yes\": 0, \"No\": 1, \"(remain silent)\": 2}</choiceJSON>"
+},
+3: {
+"links": {
+0: 6
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>I doubt that...</dialog>"
+},
+4: {
+"links": {
+0: 6
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>Atleast you are honest in your deception.</dialog>"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>I do not trust you. You should leave before you hurt this place.</dialog>"
+},
+6: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+10: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>You should avoid what the Salesman offers. His shortcuts always come at a high price.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+11: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>You want to know what type of coffee I like? Bold of you to assume that I can drink fluids.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+12: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>Why do you keep talking to me? What are you hoping to gain out of this relationship? Advice? Power? Knowledge? I have none of those things to offer.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+13: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>What am I? I am simply an observer. What that means is of little importance to you <variable>username</variable>.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+14: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>I saw someone digging around in your garden last night.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+15: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Malcolm</speaker>
+<dialog>Looks like you have settled in fine here. Remember to get to know the townsfolk of Prometheus. Knowing what they like drink-wise and decor-wise can help boost your sales!</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Malcolm</speaker>
+<dialog>Sorry, my business side took over there haha!</dialog>"
+},
+4: {
 "links": {
 
 },
@@ -82,6 +537,19 @@ story = {
 }
 }
 names = {
-"velmi_interaction_1": 1,
-"velmi_interaction_2": 2
+"Crow_interaction_1": 8,
+"Crow_interaction_2": 9,
+"Crow_interaction_3": 10,
+"Crow_interaction_4": 11,
+"Crow_interaction_5": 12,
+"Crow_interaction_6": 13,
+"Crow_interaction_7": 14,
+"Malcolm_interaction_1": 15,
+"Velmi_interaction_1": 1,
+"Velmi_interaction_2": 2,
+"Velmi_interaction_3": 3,
+"Velmi_interaction_4": 4,
+"Velmi_interaction_5": 5,
+"Velmi_interaction_6": 6,
+"Velmi_interaction_7": 7
 }

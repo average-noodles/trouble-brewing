@@ -6,6 +6,10 @@ onready var _Dialog_Box = self.find_node("Dialog_Box")
 onready var _Speaker_LBL = self.find_node("Speaker_Label")
 onready var _SpaceBar_Icon = self.find_node("SpaceBar_NinePatchRect")
 onready var game_state_controller = get_node("/root/GameStateController")
+onready var option_list = get_node("CanvasLayer/Dialog_Box/Body_NinePatchRect/Option_List")
+onready var select_choice = get_node("CanvasLayer/Dialog_Box/Body_NinePatchRect/Select_Choice")
+
+onready var option_button_scene = load("res://Logic/DialogBox/Option.tscn")
 
 var _did = 0
 var _nid = 0
@@ -23,6 +27,10 @@ func _ready():
 	
 	_Dialog_Box.visible = false
 	_SpaceBar_Icon.visible = false
+	select_choice.visible = false
+	option_list.visible = false
+	
+	_clear_options()
 
 
 func _input(event):
@@ -33,7 +41,11 @@ func _input(event):
 # Callback Methods
 
 func _on_Body_AnimationPlayer_animation_finished(anim_name):
-	_SpaceBar_Icon.visible = true
+	if 	option_list.get_child_count() == 0:
+		_SpaceBar_Icon.visible = true
+	else:
+		select_choice.visible = true
+		option_list.visible = true
 
 
 func _on_Dialog_Player_pressed_spacebar():
@@ -42,6 +54,14 @@ func _on_Dialog_Player_pressed_spacebar():
 		_get_next_node()
 		if _is_playing():
 			_play_node()
+
+func _on_Option_clicked(slot):
+	select_choice.visible = false
+	option_list.visible = false
+	_get_next_node(slot)
+	_clear_options()
+	if _is_playing():
+		_play_node()
 
 # Public Methods
 
@@ -66,8 +86,8 @@ func _is_waiting() -> bool:
 	return _SpaceBar_Icon.visible
 
 
-func _get_next_node():
-	_nid = _Story_Reader.get_nid_from_slot(_did, _nid, 0)
+func _get_next_node(slot: int = 0):
+	_nid = _Story_Reader.get_nid_from_slot(_did, _nid, slot)
 	
 	if _nid == _final_nid:
 		_Dialog_Box.visible = false
@@ -100,7 +120,28 @@ func _play_node():
 	text = _inject_variables(text)
 	var speaker = _get_tagged_text("speaker", text)
 	var dialog = _get_tagged_text("dialog", text)
+	if "<choiceJSON>" in text:
+		var options = _get_tagged_text("choiceJSON", text)
+		_populate_choices(options)
 		
 	_Speaker_LBL.text = speaker
 	_Body_LBL.text = dialog
 	_Body_AnimationPlayer.play("TextDisplay")
+
+func _clear_options():
+	var children = option_list.get_children()
+	for child in children:
+		option_list.remove_child(child)
+		child.queue_free()
+
+func _populate_choices(JSONtext: String):
+	var choices = {}
+	choices = parse_json(JSONtext)
+	
+	for text in choices:
+		var slot = choices[text]
+		var new_option_button = option_button_scene.instance()
+		option_list.add_child(new_option_button)
+		new_option_button.slot = slot
+		new_option_button.set_text(text)
+		new_option_button.connect("clicked", self, "_on_Option_clicked")

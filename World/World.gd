@@ -20,7 +20,7 @@ func _ready():
 		var time_range = character_dictionary[key]["time"]
 		var time = clock.get_time()
 		time = time[0] * 60 + time[1]
-		if time_range["in_time"] <= time and time_range["out_time"] > time:
+		if (time_range["in_time"] <= time and time_range["out_time"] > time) and check_day(character_dictionary[key]["days_in_shop"],clock.get_day()):
 			var npc_instance = load(character_dictionary[key]["file_location"])
 			var npc = npc_instance.instance()
 			ysort.add_child(npc)
@@ -48,7 +48,7 @@ func _process(delta):
 		var time_range = character_dictionary[key]["time"]
 		var time = clock.get_time()
 		time = time[0] * 60 + time[1]
-		if (time_range["in_time"] <= time and time_range["out_time"] > time) and not current_npcs.has(key):
+		if (time_range["in_time"] <= time and time_range["out_time"] > time) and not current_npcs.has(key) and check_day(character_dictionary[key]["days_in_shop"],clock.get_day()):
 			var npc_instance = load(character_dictionary[key]["file_location"])
 			var npc = npc_instance.instance()
 			ysort.add_child(npc)
@@ -58,7 +58,6 @@ func _process(delta):
 			remote_transform.set_update_scale(false)
 			remote_transform.set_remote_node(character_dictionary[key]["ysort_path"])
 			npc_path.add_child(remote_transform)
-			npc_path.set_unit_offset(1)
 			npc.set_enter(true)
 			current_npcs[key] = {"time": character_dictionary[key]["time"], "npc": npc}	
 	
@@ -70,3 +69,9 @@ func _process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func check_day(alist, day):
+	for i in alist:
+		if i == day:
+			return true
+	return false

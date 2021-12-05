@@ -132,10 +132,10 @@ autowrap = true
 anims/TextDisplay = SubResource( 2 )
 
 [node name="Speaker_NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Dialog_Box/Body_NinePatchRect"]
-margin_left = -21.6035
-margin_top = -18.4796
-margin_right = 158.396
-margin_bottom = 29.5204
+margin_left = -22.0
+margin_top = -18.0
+margin_right = 215.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 180, 48 )
 texture = ExtResource( 2 )
 patch_margin_left = 3

@@ -6,6 +6,13 @@
 script = ExtResource( 1 )
 TYPE = "EXP_Story_editor"
 names = {
+"Betsy_interaction_1": 22,
+"Betsy_interaction_2": 23,
+"Betsy_interaction_3": 24,
+"Betsy_interaction_4": 25,
+"Betsy_interaction_5": 26,
+"Betsy_interaction_6": 27,
+"Betsy_interaction_7": 28,
 "Crow_interaction_1": 8,
 "Crow_interaction_2": 9,
 "Crow_interaction_3": 10,
@@ -14,6 +21,26 @@ names = {
 "Crow_interaction_6": 13,
 "Crow_interaction_7": 14,
 "Malcolm_interaction_1": 15,
+"Malcolm_interaction_2": 16,
+"Malcolm_interaction_3": 17,
+"Malcolm_interaction_4": 18,
+"Malcolm_interaction_5": 19,
+"Malcolm_interaction_6": 20,
+"Malcolm_interaction_7": 21,
+"Put_interaction_1": 36,
+"Put_interaction_2": 37,
+"Put_interaction_3": 38,
+"Put_interaction_4": 39,
+"Put_interaction_5": 40,
+"Put_interaction_6": 41,
+"Put_interaction_7": 42,
+"Sunni_interaction_1": 29,
+"Sunni_interaction_2": 30,
+"Sunni_interaction_3": 31,
+"Sunni_interaction_4": 33,
+"Sunni_interaction_5": 34,
+"Sunni_interaction_6": 35,
+"Sunni_interaction_7": 32,
 "Velmi_interaction_1": 1,
 "Velmi_interaction_2": 2,
 "Velmi_interaction_3": 3,
@@ -882,6 +909,1395 @@ story = {
 },
 4: {
 "graph_offset": Vector2( 1540, 20 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+16: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Malcolm_interaction_2",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -180 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>You know you can buy different types of decor from your computer on the counter? You should try it out.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -180 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+17: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Malcolm_interaction_3",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, -180 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -180 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>You know I have been mayor of Prometheus for the past 15 years.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -180 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>It's probably because no one has ever tried to run against me. I take it as a badge of honor because it must mean I am doing a good job.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1420, -180 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+18: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Malcolm_interaction_4",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -200 ),
+"links": {
+0: 3,
+2: 5,
+3: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 4,
+"text": "<speaker>Malcolm</speaker>
+<dialog>Later today I am meeting with our districts congressman. What type of outfit do you think I should wear?</dialog>
+<choiceJSON>{\"Formal\":0,\"Business Casual\":1,\"Casual\":2,\"You don't wear clothes?\":3}</choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -300 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>You're probably right. A formal event calls for formal clothes. I should see if my suit still has wrinkles in it...</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 960, -140 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+</dialog>It's true. I have known our congressman for a long time. Something a little less serious might be the right choice. Thank you!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 960, 40 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>Casual seems a little informal if you ask me, but what's the harm? Not like he can fire me right? Haha!</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 960, 200 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>What do you mean I don't wear clothes? I am wearing clothes right now. Is everything alright <variable>name</variable></dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 1480, -100 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+19: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Malcolm_interaction_5",
+"nodes": {
+1: {
+"graph_offset": Vector2( 80, -480 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 540, -560 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>Just wanted to let you know my meeting with the congressman went extremely well! He really liked my outfit! Good work! *Malcolm winks*</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1040, -420 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+20: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Malcolm_interaction_6",
+"nodes": {
+1: {
+"graph_offset": Vector2( 60, -420 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 540, -420 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>You know this old place is starting to look rundown. Maybe I should reach out to my friend Brock. He use to work in construction. Maybe he can help makes some improvements to this place!</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1000, -420 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+21: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Malcolm_interaction_7",
+"nodes": {
+1: {
+"graph_offset": Vector2( 140, -340 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 600, -340 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog> *Malcolm is pouring over a large stack of spreadsheets. The top of one paper says Prometheus yearly budget*</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1060, -340 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Malcolm</speaker>
+<dialog>Sorry <variable>name</variable>. I am a little bit busy right now. Maybe we can chat another time.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1520, -340 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+22: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Betsy_interaction_1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -560 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>...mmmm what to order, what to order..?</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -560 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Oh hello dearie. I didn't see you there. What's your name?</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1420, -560 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog><variable>name</variable>. Of course. I heard you were taking over this place after the last person quit. What a nice fellow they were. Shame what happened to them. Anyways good luck!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 1880, -560 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+23: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Betsy_interaction_2",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, -560 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -560 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>*Betsy is talking into her phone with the speaker on*</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -560 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Unidentified Voice</speaker>
+<dialog>Anyways how are things going with you Betsy? Still living in Prometheus?</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1420, -560 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Of course. You know I grew up here. I could never be away from this place for too long even if Put moved away.</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 1880, -560 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Unidentified Voice</speaker>
+<dialog>Is Put planning on going to college anytime soon? Bright kid like that should be off helping the world not stuck in such a small town.</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 2340, -560 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Oh you know them though. Super smart but has a hard time getting off the couch!</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 2800, -560 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+24: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Betsy_interaction_3",
+"nodes": {
+1: {
+"graph_offset": Vector2( -1480, -520 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( -1000, -520 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Dearie, do you have coffee with French Vanilla? If not you should use those plots outside to grow some vanilla beans.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( -540, -520 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+25: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Betsy_interaction_4",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( -880, -560 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>You know? This place would be perfect for a stage. You could even host poetry nights! Now that would bring people in. Too bad there isn't anyone to build the stage. Unless...</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( -420, -560 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+26: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Betsy_interaction_5",
+"nodes": {
+1: {
+"graph_offset": Vector2( -1160, -500 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( -700, -500 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Have you met my child, Put? They are a really nice kid. I think the two of you would get along swimmingly. If you want them to come into the shop, they just adore things with chocolate in them.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( -240, -500 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+27: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Betsy_interaction_6",
+"nodes": {
+1: {
+"graph_offset": Vector2( -860, -520 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( -400, -520 ),
+"links": {
+0: 3,
+1: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Betsy</speaker>
+<dialog>Oh, <variable>name</variable>. Are you into betting?</dialog>
+<choiceJSON>{\"Yes\":0,\"No\":1}</choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 60, -620 ),
+"links": {
+0: 6,
+1: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Betsy</speaker>
+<dialog>Finally, someone that wants to have some fun around here. Anyways, you know Sunni and Velmi correct? Well it's pretty obvious that the two are like completely head over heels for each other, but neither of them has the gall to make the first move. So what do you think. Will they get together before the year ends?</dialog>
+<choiceJSON>{\"Oh most definetly.\": 0,\"No way. Give 'em three more years.\":1}</choiceJSON>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 60, -440 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Oh, you are no fun!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 560, -240 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 540, -700 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Ha the optimism!</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 540, -540 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>So pessimistic! Where is your inner romanatic?!</dialog>",
+"type": "line"
+}
+}
+},
+28: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Betsy_interaction_7",
+"nodes": {
+1: {
+"graph_offset": Vector2( 60, -500 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 520, -500 ),
+"links": {
+0: 3,
+1: 4,
+2: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 3,
+"text": "<speaker>Betsy</speaker>
+<dialog>Hey, <variable>name</variable>. When was the last time you talked to your mom?</dialog>
+<choiceJSON>{\"Within the last few days.\":0,\"A few weeks ago\":1,\"It's been awhile\":2}</choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 980, -600 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>That's good...</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 980, -440 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Maybe you should give her a call some time soon? </dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 960, -260 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Betsy</speaker>
+<dialog>Oh you should call her...</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 1480, -440 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+29: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Sunni_interaction_1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 0, -220 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 480, -240 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>Hello there! You must be <variable>username</variable>. Errr I mean <variable>name</variable>.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 940, -260 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>Sorry you just remind me of someone else I know.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1420, -220 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+30: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Sunni_interaction_2",
+"nodes": {
+1: {
+"graph_offset": Vector2( 80, -240 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 540, -240 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>Hey <variable>name</variable>! Are you much of an athlete because I am looking for new people to join my soccer team. You should consider it cuz I bet you have a mean kick!</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1000, -240 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+31: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Sunni_interaction_3",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 520, -240 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>You should start serving protein shakes here then I could cut caffeine out of my diet.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1000, -240 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>Actually that might be a bad idea. My roommate already has to push me out of bed to get me up. I am not much of a morning person to be honest.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1480, -240 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+32: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Sunni_interaction_7",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, -240 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -240 ),
+"links": {
+0: 3,
+1: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Sunni</speaker>
+<dialog>Hey <variable>name<variable>? Can I vent to you for a second?</dialog>
+<choiceJSON>{\"Yeah, what's up?\":0,\"Sorry, I am pretty busy.\":1}</choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -300 ),
+"links": {
+0: 7,
+1: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Sunni</speaker>
+<dialog>So might roommate and I... Oooh I haven't told you who my roommate is. It's Velmi. Anyway Velmi has been acting kind of weird recently. We went to the park for a picnic last week and made a joke that it was kind of like a date. Then she got real quiet. I really don't wanna mess up our friendship.</dialog>
+<choiceJSON>{\"I mean, do you like her that way?\":0,\"Weird. Probably nothing to worry about\":1}</choiceJSON>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 960, -100 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>Oh sorry for bothering you then. Have a good one!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 1440, -100 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 1420, -260 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>You're probably right. Maybe she just needs some space. Thanks <variable>username<variable>!</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 1420, -420 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>WHAT?! No no no. I TOTALLY don't have feelings for ...velmi... Oh shit.</dialog>",
+"type": "line"
+}
+}
+},
+33: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Sunni_interaction_4",
+"nodes": {
+1: {
+"graph_offset": Vector2( 60, -320 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 520, -320 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>You know what this place needs? Karoke rooms! That would be so much fun! I really wish Brock where here. He could easily make those in a fly.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 980, -320 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+34: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Sunni_interaction_5",
+"nodes": {
+1: {
+"graph_offset": Vector2( 200, -300 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 660, -300 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni</speaker>
+<dialog>*Sunni has headphones in and is singing along to a pop song*</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1120, -300 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+35: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Sunni_interaction_6",
+"nodes": {
+1: {
+"graph_offset": Vector2( 120, -300 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 600, -300 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Sunni<speaker>
+<dialog>Y'know there are a lot of good hiking trails around Prometheus. We should go hiking together sometime!</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1060, -300 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+36: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Put_interaction_1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 120, -340 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 580, -340 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>Sup. Name's Put, and you are? <variable>name</variable>? Nice.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1040, -340 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+37: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Put_interaction_2",
+"nodes": {
+1: {
+"graph_offset": Vector2( -80, -360 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 380, -360 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>Today's just one of those days where you don't wanna get out of bed until after noon.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 860, -360 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>Hell what am I saying. That's most days.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 1340, -360 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+38: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Put_interaction_3",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 520, -360 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>Yeh, Morton is like my bestfriend. Guy went to college to be an engineer even though he hates the work. Never gonna catch me wasting money on a college degree.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 980, -360 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+39: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Put_interaction_4",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -340 ),
+"links": {
+0: 3,
+1: 4,
+2: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 3,
+"text": "<speaker>Put</speaker>
+<dialog>Ok <variable>name</variable>. Morton and I got into a bit of an argument last night about Spiderman. He thinks that the new Disney one's are better the original one's with Tobey Maguire. Tell me I am not insane ok?</dialog>
+<choiceJSON>{\"Yeh, the Tobey Maguire one's are the best.\":0,\"Nah, you are crazy. Tom Holland's were the best.\":1,\"You are both wrong. Andrew Garfield's were the best.\":2}</choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -440 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>I am glad you see there artistic worth!</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 960, -280 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>Not you too!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 960, -120 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>Y'know what? Props for liking the bad one, dude.</dialog",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 1440, -280 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+40: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Put_interaction_5",
+"nodes": {
+1: {
+"graph_offset": Vector2( 80, -340 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 540, -340 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1000, -340 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+41: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Put_interaction_6",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, -360 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 500, -360 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>This place would be much cooler if it had a more homey aesthetic. You should consider buying some stuff.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 960, -360 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+42: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Put_interaction_7",
+"nodes": {
+1: {
+"graph_offset": Vector2( 220, -300 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 680, -320 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Put</speaker>
+<dialog>Hey <variable>name</variable>. Sometimes my mom can be kind of weird. Let me know if she is ok?</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 1140, -300 ),
 "links": {
 
 },

@@ -15,22 +15,22 @@ var default_data = {
 		"username": ""
 	},
 	"npcs": {
-#		"Betsy": {
-#			"time": {
-#				"in_time": 0,
-#				"out_time": 100000
-#			},
-#			"final_animation": "IdleRight",
-#			"file_location": "res://NPCs/Betsy/Betsy.tscn",
-#			"npc_path": "NPCsPath/BetsyPath2D/PathFollow2D",
-#			"ysort_path": "/root/World/YSort/BetsyKinematicBody2D",
-#			"days_in_shop": [1,3,4,5,6,7,8,9,10,11,12,13,14],
-#			"interaction": {
-#				"interacted_today": false,
-#				"last_interacted": 0,
-#				"total_interactions": 0
-#			},
-#		},
+		"Betsy": {
+			"time": {
+				"in_time": 0,
+				"out_time": 100000
+			},
+			"final_animation": "IdleRight",
+			"file_location": "res://NPCs/Betsy/Betsy.tscn",
+			"npc_path": "NPCsPath/BetsyPath2D/PathFollow2D",
+			"ysort_path": "/root/World/YSort/BetsyKinematicBody2D",
+			"days_in_shop": [1,3,4,5,6,7,8,9,10,11,12,13,14],
+			"interaction": {
+				"interacted_today": false,
+				"last_interacted": 0,
+				"total_interactions": 1
+			},
+		},
 		"Malcolm": {
 			"time": {
 				"in_time": 0,
@@ -113,38 +113,38 @@ var default_data = {
 				"total_interactions": 1
 			},
 		},
-#		"Put": {
-#			"time": {
-#				"in_time": 0,
-#				"out_time": 1000000
-#			},
-#			"final_animation": "IdleDown",
-#			"file_location": "res://NPCs/Put/Put.tscn",
-#			"npc_path": "NPCsPath/PutPath2D/PathFollow2D",
-#			"ysort_path": "/root/World/YSort/PutKinematicBody2D",
-#			"days_in_shop": [1,3,4,5,6,7,8,9,10,11,12,13,14],
-#			"interaction": {
-#				"interacted_today": false,
-#				"last_interacted": 0,
-#				"total_interactions": 1
-#			},
-#		},
-#		"Sunni": {
-#			"time": {
-#				"in_time": 0,
-#				"out_time": 1000000
-#			},
-#			"final_animation": "IdleLeft",
-#			"file_location": "res://NPCs/Sunni/Sunni.tscn",
-#			"npc_path": "NPCsPath/SunniPath2D/PathFollow2D",
-#			"ysort_path": "/root/World/YSort/SunniKinematicBody2D",
-#			"days_in_shop": [1,3,4,5,6,7,8,9,10,11,12,13,14],
-#			"interaction": {
-#				"interacted_today": false,
-#				"last_interacted": 0,
-#				"total_interactions": 1
-#			},
-#		}
+		"Put": {
+			"time": {
+				"in_time": 0,
+				"out_time": 1000000
+			},
+			"final_animation": "IdleDown",
+			"file_location": "res://NPCs/Put/Put.tscn",
+			"npc_path": "NPCsPath/PutPath2D/PathFollow2D",
+			"ysort_path": "/root/World/YSort/PutKinematicBody2D",
+			"days_in_shop": [1,3,4,5,6,7,8,9,10,11,12,13,14],
+			"interaction": {
+				"interacted_today": false,
+				"last_interacted": 0,
+				"total_interactions": 1
+			},
+		},
+		"Sunni": {
+			"time": {
+				"in_time": 0,
+				"out_time": 1000000
+			},
+			"final_animation": "IdleLeft",
+			"file_location": "res://NPCs/Sunni/Sunni.tscn",
+			"npc_path": "NPCsPath/SunniPath2D/PathFollow2D",
+			"ysort_path": "/root/World/YSort/SunniKinematicBody2D",
+			"days_in_shop": [1,3,4,5,6,7,8,9,10,11,12,13,14],
+			"interaction": {
+				"interacted_today": false,
+				"last_interacted": 0,
+				"total_interactions": 1
+			},
+		}
 	}
 		
 }

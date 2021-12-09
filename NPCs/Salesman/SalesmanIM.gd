@@ -10,7 +10,7 @@ onready var game_state_controller = get_node("/root/GameStateController")
 var dialog = ""
 var interaction_dict = {}
 var npc_dict = {}
-var npc_name = "Morton"
+var npc_name = "Salesman"
 
 func _ready():
 	npc_dict = game_state_controller.get_data(npc_name)
@@ -21,10 +21,7 @@ func _process(delta):
 		interaction_dict["interacted_today"] = false
 		npc_dict["interaction"] = interaction_dict
 		game_state_controller.update_data("npcs",npc_name,npc_dict)
-	if game_state_controller.get_data("glitched"):
-		dialog = "glitched_dialog"
-	else:
-		dialog = npc_name + "_interaction_" + String(interaction_dict["total_interactions"])
+	dialog = "Salesman_interaction"
 # Called when the node enters the scene tree for the first time.
 func receive_interaction() -> void:
 	if not interaction_dict["interacted_today"]:
@@ -34,7 +31,6 @@ func receive_interaction() -> void:
 		interaction_dict["total_interactions"] += 1
 		npc_dict["interaction"] = interaction_dict
 		game_state_controller.update_data("npcs",npc_name,npc_dict)
-		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

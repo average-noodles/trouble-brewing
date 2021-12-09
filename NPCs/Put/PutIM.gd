@@ -21,11 +21,14 @@ func _process(delta):
 		interaction_dict["interacted_today"] = false
 		npc_dict["interaction"] = interaction_dict
 		game_state_controller.update_data("npcs",npc_name,npc_dict)
-	dialog = npc_name + "_interaction_" + String(interaction_dict["total_interactions"])
+	if game_state_controller.get_data("glitched"):
+		dialog = "glitched_dialog"
+	else:
+		dialog = npc_name + "_interaction_" + String(interaction_dict["total_interactions"])
 # Called when the node enters the scene tree for the first time.
 func receive_interaction() -> void:
 	if not interaction_dict["interacted_today"]:
-		dialog_player.play_dialog(dialog)
+		dialog_player.play_dialog(dialog,npc_name)
 		interaction_dict["interacted_today"] = true
 		interaction_dict["last_interacted"] = clock.get_day()
 		interaction_dict["total_interactions"] += 1

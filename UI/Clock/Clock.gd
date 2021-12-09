@@ -32,7 +32,7 @@ func _process(delta):
 	time = _get_time()
 	_get_date()
 	_set_time(time[0],time[1])
-	#_set_day(game_state_controller.get_data["start_date"])
+	#_set_day(game_state_controller.get_data("date_started"))
 	
 func _get_time():
 	var datetime = OS.get_datetime()
@@ -74,7 +74,7 @@ func _set_time(hour, minute):
 func _set_day(start_date):
 	day = _get_total_days(date) - _get_total_days(start_date)
 	if day < 15:
-		clock_days_sprite.set_frame(day - 1)
+		clock_days_sprite.set_frame(day)
 
 func _get_total_days(temp_date):
 	var total_days = 0
@@ -98,7 +98,7 @@ func get_date():
 	return date
 	
 func set_day(new_day):
-	if new_day < 15 and new_day > 0:
+	if new_day < 8 and new_day > 0:
 		day = new_day
 		clock_days_sprite.set_frame(day - 1)
 

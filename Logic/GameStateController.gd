@@ -8,6 +8,10 @@ var default_data = {
 	"player": {
 		"name": "default",
 		"money": 1000,
+		"cocoabean": 0,
+		"vanillabean": 0,
+		"icecube": 0,
+		
 	},
 	"date_started" : {},
 	"garden": {},

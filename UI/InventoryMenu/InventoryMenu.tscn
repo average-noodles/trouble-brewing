@@ -1,0 +1,115 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://UI/MainMenu/MainMenu.png" type="Texture" id=1]
+[ext_resource path="res://Logic/DialogBox/fonts/Cave-Story.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/InventoryMenu/InventoryMenu.gd" type="Script" id=3]
+[ext_resource path="res://UI/InventoryMenu/DolarSign.png" type="Texture" id=4]
+[ext_resource path="res://UI/InventoryMenu/VanillaBean.png" type="Texture" id=5]
+[ext_resource path="res://UI/InventoryMenu/Icecube.png" type="Texture" id=6]
+[ext_resource path="res://UI/InventoryMenu/CocoaBean.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="InventoryMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Popup" type="Popup" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Popup"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 208.0
+margin_right = 280.0
+margin_bottom = 80.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryLabel" type="Label" parent="CanvasLayer/Popup/TextureRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -29.5
+margin_top = 1.0
+margin_right = 29.5
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 1 )
+text = "Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyLabel" type="Label" parent="CanvasLayer/Popup/TextureRect"]
+margin_left = 24.0
+margin_top = 15.0
+margin_right = 64.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CocoaBeanLabel" type="Label" parent="CanvasLayer/Popup/TextureRect"]
+margin_left = 24.0
+margin_top = 48.0
+margin_right = 64.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VanillaBeanLabel" type="Label" parent="CanvasLayer/Popup/TextureRect"]
+margin_left = 24.0
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IceCubeLabel" type="Label" parent="CanvasLayer/Popup/TextureRect"]
+margin_left = 24.0
+margin_top = 64.0
+margin_right = 64.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CocoaBeanSprite" type="Sprite" parent="CanvasLayer/Popup/TextureRect"]
+position = Vector2( 12, 36 )
+texture = ExtResource( 7 )
+
+[node name="VanillaBeanSprite" type="Sprite" parent="CanvasLayer/Popup/TextureRect"]
+position = Vector2( 12, 52 )
+texture = ExtResource( 5 )
+
+[node name="IceCubeSprite" type="Sprite" parent="CanvasLayer/Popup/TextureRect"]
+position = Vector2( 12, 68 )
+texture = ExtResource( 6 )
+
+[node name="DollarSignSprite" type="Sprite" parent="CanvasLayer/Popup/TextureRect"]
+position = Vector2( 12, 20 )
+texture = ExtResource( 4 )

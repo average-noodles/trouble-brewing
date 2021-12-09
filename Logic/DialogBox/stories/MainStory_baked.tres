@@ -90,7 +90,7 @@ story = {
 0: 6
 },
 "text": "<speaker>Velmi</speaker>
-<dialog>You want to know what I am reading!?<dialog>"
+<dialog>You want to know what I am reading!?</dialog>"
 },
 6: {
 "links": {
@@ -212,21 +212,24 @@ story = {
 0: 7
 },
 "text": "<speaker>Velmi</speaker>
-<dialog>I've never played a paladin before. I am gonna make her a bimbo. Thanks <variable>name</variable></dialog>"
+<dialog>I've never played a paladin before. I am gonna make her a bimbo. Thanks <variable>name</variable></dialog>
+<outcome>0</outcome>"
 },
 5: {
 "links": {
 0: 7
 },
 "text": "<speaker>Velmi</speaker>
-<dialog>Rogue is my favorite DnD class, and I know what you are thinking. I have never played a lone wolf rogue character before because I have respect for my GM's time. Anyways, thanks for the help <variable>name</variable></dialog>"
+<dialog>Rogue is my favorite DnD class, and I know what you are thinking. I have never played a lone wolf rogue character before because I have respect for my GM's time. Anyways, thanks for the help <variable>name</variable></dialog>
+<outcome>1</outcome>"
 },
 6: {
 "links": {
 0: 7
 },
 "text": "<speaker>Velmi</speaker>
-<dialog>Warlock, interesting choice. I kind of don't like the fact that they only get like zero spell slots. I feel like I spend so much of the game doing nothing. Maybe I can convince the GM to...</dialog>"
+<dialog>Warlock, interesting choice. I kind of don't like the fact that they only get like zero spell slots. I feel like I spend so much of the game doing nothing. Maybe I can convince the GM to...</dialog>
+<outcome>2</outcome>"
 },
 7: {
 "links": {
@@ -262,7 +265,7 @@ story = {
 4: {
 "links": {
 0: 6,
-1: 5
+1: 9
 },
 "text": "<speaker>Velmi</speaker>
 <dialog>I just want a book where two lesbians fall in love. Is that too much too ask!</dialog>
@@ -293,7 +296,16 @@ story = {
 0: 5
 },
 "text": "<speaker>Velmi</speaker>
-<dialog>...but you are right. Maybe I should try writing my own book.</dialog>"
+<dialog>...but you are right. Maybe I should try writing my own book.</dialog>
+<outcome>0</outcome>"
+},
+9: {
+"links": {
+0: 5
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>*Velmi continues to look at her book in disappointment*</dialog>
+<outcome>1</outcome>"
 }
 }
 },
@@ -1091,7 +1103,8 @@ story = {
 0: 5
 },
 "text": "<speaker>Sunni</speaker>
-<dialog>Oh sorry for bothering you then. Have a good one!</dialog>"
+<dialog>Oh sorry for bothering you then. Have a good one!</dialog>
+<outcome>2</outcome>"
 },
 5: {
 "links": {
@@ -1104,14 +1117,16 @@ story = {
 0: 5
 },
 "text": "<speaker>Sunni</speaker>
-<dialog>You're probably right. Maybe she just needs some space. Thanks <variable>username<variable>!</dialog>"
+<dialog>You're probably right. Maybe she just needs some space. Thanks <variable>username<variable>!</dialog>
+<outcome>1</outcome>"
 },
 7: {
 "links": {
 0: 5
 },
 "text": "<speaker>Sunni</speaker>
-<dialog>WHAT?! No no no. I TOTALLY don't have feelings for ...velmi... Oh shit.</dialog>"
+<dialog>WHAT?! No no no. I TOTALLY don't have feelings for ...velmi...</dialog>
+<outcome>0</outcome>"
 }
 }
 },
@@ -1375,6 +1390,100 @@ story = {
 "text": "<end>"
 }
 }
+},
+43: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>...</speaker>
+<dialog>... hello <variable>username</variable>...</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+44: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>LOOK WHAT YOU'VE DONE IDIOT! YOU'VE DESTROYED EVERYTHING! I TOLD YOU NOT TO ACCEPT OR USE THE CHEAT CODES OFFERED BY THE SALESMAN, BUT YOU DID SO ANYWAY!!!</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>*sighs* Well the game wouldn't be very fun if we left things like this. I will fix it this one time. Never use that cheat or gods help me I will kill you<variable>username</variable>!</dialog>"
+},
+4: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+45: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3,
+1: 4
+},
+"text": "<speaker>Shady Salesman?</speaker>
+<dialog>Well hello there, <variable>username</variable>. Could I interest you in some cheat codes?</dialog>
+<choiceJSON>{\"Yes\":0,\"No\":1}</choiceJSON>"
+},
+3: {
+"links": {
+0: 5
+},
+"text": "<speaker>Shady Salesman?</speaker>
+<dialog>Now that is the answer I like to hear. In order to use these cheat codes, you only have to press the ` key. It will open a little menu. Type a number in and press enter, and voilà, you skip right to that day. Thanks me later.</dialog>
+<outcome>0</outcome>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Shady Salesman?</speaker>
+<dialog>Ugh you are so boring...</dialog>
+<outcome>1</outcome>"
+},
+5: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
 }
 }
 names = {
@@ -1406,6 +1515,7 @@ names = {
 "Put_interaction_5": 40,
 "Put_interaction_6": 41,
 "Put_interaction_7": 42,
+"Salesman_interaction": 45,
 "Sunni_interaction_1": 29,
 "Sunni_interaction_2": 30,
 "Sunni_interaction_3": 31,
@@ -1419,5 +1529,7 @@ names = {
 "Velmi_interaction_4": 4,
 "Velmi_interaction_5": 5,
 "Velmi_interaction_6": 6,
-"Velmi_interaction_7": 7
+"Velmi_interaction_7": 7,
+"crow_glitched_dialog": 44,
+"glitched_dialog": 43
 }

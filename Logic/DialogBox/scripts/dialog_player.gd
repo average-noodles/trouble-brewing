@@ -15,6 +15,8 @@ var _did = 0
 var _nid = 0
 var _final_nid = 0
 var _Story_Reader
+var npc = ""
+var dialog_name = ""
 
 # Virtual Methods
 
@@ -65,10 +67,12 @@ func _on_Option_clicked(slot):
 
 # Public Methods
 
-func play_dialog(record_name : String):
+func play_dialog(record_name : String, source: String):
+	dialog_name = record_name
 	_did = _Story_Reader.get_did_via_record_name(record_name)
 	_nid = self._Story_Reader.get_nid_via_exact_text(_did, "<start>")
 	_final_nid = _Story_Reader.get_nid_via_exact_text(_did, "<end>")
+	npc = source
 	_get_next_node()
 	_play_node()
 	_Dialog_Box.visible = true
@@ -123,6 +127,11 @@ func _play_node():
 	if "<choiceJSON>" in text:
 		var options = _get_tagged_text("choiceJSON", text)
 		_populate_choices(options)
+	if "<outcome>" in text:
+		var outcome = _get_tagged_text("outcome", text)
+		var npc_dict = game_state_controller.get_data(npc)
+		npc_dict["outcome"][dialog_name] = outcome
+		game_state_controller.update_data("npcs",npc,npc_dict)
 		
 	_Speaker_LBL.text = speaker
 	_Body_LBL.text = dialog

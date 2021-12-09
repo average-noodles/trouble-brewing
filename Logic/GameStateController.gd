@@ -18,6 +18,9 @@ var default_data = {
 	"system_name" : {
 		"username": ""
 	},
+	"game_state": {
+		"glitched": false
+	},
 	"npcs": {
 		"Betsy": {
 			"time": {
@@ -67,24 +70,23 @@ var default_data = {
 #				"total_interactions": 1
 #			}
 #		},
-#		"Saleman": {
-#			"time": {
-#				"in_time": 500,
-#				"out_time": 100000
-#			},
-#			"final_animation": "IdleLeft",
-#			"file_location": "res://NPCs/Velmi/Velmi.tscn",
-#			"npc_path": "YSort/VelmiPath2D",
-#			"interaction": {
-#				"interacted_today": false,
-#				"last_interacted": {
-#					"day": -1,
-#					"month": -1,
-#					"year": -1,
-#				},
-#				"total_interactions": 0
-#			}
-#		},
+		"Salesman": {
+			"time": {
+				"in_time": 0,
+				"out_time": 100000
+			},
+			"final_animation": "Idle",
+			"file_location": "res://NPCs/Salesman/Salesman.tscn",
+			"npc_path": "NPCsPath/SalesmanPath2D/PathFollow2D",
+			"ysort_path": "/root/World/YSort/SalesmanKinematicBody2D",
+			"days_in_shop": [7],
+			"interaction": {
+				"interacted_today": false,
+				"last_interacted": 0,
+				"total_interactions": 1
+			},
+			"outcome": {}
+		},
 		"Crow": {
 			"time": {
 				"in_time": 0,
@@ -114,8 +116,9 @@ var default_data = {
 			"interaction": {
 				"interacted_today": false,
 				"last_interacted": 0,
-				"total_interactions": 1
+				"total_interactions": 5
 			},
+			"outcome":{},
 		},
 		"Put": {
 			"time": {

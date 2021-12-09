@@ -10,6 +10,8 @@ onready var new_game_button = get_node("NewGameButton")
 onready var delete_save_popup_menu = get_node("DeleteSavePopupMenu")
 onready var game_state_controller = get_node("/root/GameStateController")
 onready var no_save_game_popup = get_node("NoSaveGamePopup")
+onready var line_edit = get_node("EnterNamePopup/LineEdit")
+onready var enter_name_popup = get_node("EnterNamePopup")
 
 var path = "user://data.json"
 var data = {}
@@ -34,7 +36,8 @@ func _on_NewGameButton_pressed():
 func _on_YesButton_pressed():
 	game_state_controller.reset_data()
 	game_state_controller.save_game()
-	get_tree().change_scene("res://World/World.tscn")
+	delete_save_popup_menu.hide()
+	enter_name_popup.show()
 
 
 func _on_NoButton_pressed():
@@ -46,5 +49,11 @@ func _on_OkButton_pressed():
 	load_button.show()
 	new_game_button.show()
 	no_save_game_popup.hide()
-	
-	
+
+func _on_Button_pressed():
+	if line_edit.get_text() == "":
+		game_state_controller.update_data("player","name","Player")
+	else:
+		game_state_controller.update_data("player","name",line_edit.get_text())
+	game_state_controller.save_game()
+	get_tree().change_scene("res://World/World.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://UI/MainMenu/MainMenu.png" type="Texture" id=1]
 [ext_resource path="res://UI/MainMenu/Smoke.png" type="Texture" id=2]
@@ -39,6 +39,15 @@ font_data = ExtResource( 4 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=10]
 font_data = ExtResource( 4 )
 
 [node name="MainMenu" type="Control"]
@@ -190,8 +199,66 @@ margin_right = 15.0
 margin_bottom = -10.0
 custom_fonts/font = SubResource( 7 )
 text = "Ok"
+
+[node name="EnterNamePopup" type="Popup" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -133.0
+margin_top = -57.0
+margin_right = -28.0
+margin_bottom = 52.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="EnterNamePopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="EnterNamePopup"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -31.5
+margin_top = -27.0
+margin_right = 31.5
+margin_bottom = -7.0
+custom_fonts/font = SubResource( 8 )
+text = "Enter"
+
+[node name="Label" type="Label" parent="EnterNamePopup"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -48.5
+margin_top = 3.0
+margin_right = 48.5
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 9 )
+text = "Enter your name:"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="EnterNamePopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.5
+margin_top = -12.0
+margin_right = 45.5
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 10 )
+text = "Player"
 [connection signal="pressed" from="LoadButton" to="." method="_on_LoadButton_pressed"]
 [connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="DeleteSavePopupMenu/YesButton" to="." method="_on_YesButton_pressed"]
 [connection signal="pressed" from="DeleteSavePopupMenu/NoButton" to="." method="_on_NoButton_pressed"]
 [connection signal="pressed" from="NoSaveGamePopup/OkButton" to="." method="_on_OkButton_pressed"]
+[connection signal="pressed" from="EnterNamePopup/Button" to="." method="_on_Button_pressed"]

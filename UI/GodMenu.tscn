@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/GodMenu.gd" type="Script" id=1]
 
-[node name="Node2D" type="Control"]
+[node name="GodMenu" type="Control"]
 pause_mode = 2
 anchor_left = 0.5
 anchor_top = 0.5

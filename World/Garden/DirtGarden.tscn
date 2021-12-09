@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/Garden/DirtGarden.png" type="Texture" id=1]
+[ext_resource path="res://Logic/DirtGardenIM.gd" type="Script" id=2]
+[ext_resource path="res://Logic/InteractionManager.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Garden/DirtGarden.gd" type="Script" id=4]
+
+[node name="DirtGarden" type="Sprite"]
+texture = ExtResource( 1 )
+hframes = 2
+script = ExtResource( 4 )
+
+[node name="InteractionManager" parent="." instance=ExtResource( 3 )]
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )

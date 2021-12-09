@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://World/Brightwood Floor.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -16,10 +16,12 @@
 [ext_resource path="res://World/Brick Tile Set/tileset_Brick Tile Set.tres" type="TileSet" id=14]
 [ext_resource path="res://World/BrickTextureRect.tscn" type="PackedScene" id=15]
 [ext_resource path="res://UI/PauseMenu.tscn" type="PackedScene" id=16]
+[ext_resource path="res://UI/InventoryMenu/InventoryMenu.tscn" type="PackedScene" id=17]
 [ext_resource path="res://UI/GodMenu.tscn" type="PackedScene" id=18]
 [ext_resource path="res://World/Main Enterance.tscn" type="PackedScene" id=19]
 [ext_resource path="res://World/BackDoor.tscn" type="PackedScene" id=20]
-[ext_resource path="res://World/DirtGarden.tscn" type="PackedScene" id=21]
+[ext_resource path="res://World/Garden/DirtGarden.tscn" type="PackedScene" id=21]
+[ext_resource path="res://UI/GardenMenu/GardenMenu.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -276,3 +278,15 @@ position = Vector2( 264, 392 )
 rotation = 7.62398e-06
 cubic_interp = false
 loop = false
+
+[node name="InventoryMenu" parent="." instance=ExtResource( 17 )]
+margin_left = 248.0
+margin_top = 67.0
+margin_right = 248.0
+margin_bottom = 67.0
+
+[node name="GardenMenu" parent="." instance=ExtResource( 22 )]
+margin_left = -52.0
+margin_top = 49.0
+margin_right = 268.0
+margin_bottom = 229.0

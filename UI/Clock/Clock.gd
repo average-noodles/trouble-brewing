@@ -32,8 +32,8 @@ func _process(delta):
 	time = _get_time()
 	_get_date()
 	_set_time(time[0],time[1])
-	#if not game_state_controller.get_data("glitched"):
-		#_set_day(game_state_controller.get_data("date_started"))
+	if not game_state_controller.get_data("glitched"):
+		_set_day(game_state_controller.get_data("date_started"))
 	
 func _get_time():
 	var datetime = OS.get_datetime()

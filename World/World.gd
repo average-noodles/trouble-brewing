@@ -59,6 +59,7 @@ func _process(delta):
 			remote_transform.set_update_scale(false)
 			remote_transform.set_remote_node(character_dictionary[key]["ysort_path"])
 			npc_path.add_child(remote_transform)
+			npc_path.set_unit_offset(0)
 			npc.set_enter(true)
 			current_npcs[key] = {"time": character_dictionary[key]["time"], "npc": npc}	
 	

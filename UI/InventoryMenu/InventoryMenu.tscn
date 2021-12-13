@@ -25,7 +25,6 @@ __meta__ = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Popup" type="Popup" parent="CanvasLayer"]
-visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 

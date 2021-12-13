@@ -235,7 +235,7 @@ curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/VelmiPath2D"]
 position = Vector2( 296, 338 )
-rotation = -1.5708
+rotate = false
 cubic_interp = false
 loop = false
 
@@ -255,7 +255,7 @@ curve = SubResource( 3 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/MalcolmPath2D"]
 position = Vector2( 296, 416 )
-rotation = -1.5708
+rotate = false
 cubic_interp = false
 loop = false
 
@@ -265,7 +265,7 @@ curve = SubResource( 4 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/CrowPath2D"]
 position = Vector2( 296, -16 )
-rotation = 1.5708
+rotate = false
 cubic_interp = false
 loop = false
 
@@ -275,16 +275,17 @@ curve = SubResource( 5 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/BetsyPath2D"]
 position = Vector2( 296, -32 )
-rotation = 1.5708
+rotate = false
 cubic_interp = false
 loop = false
 
 [node name="PutPath2D" type="Path2D" parent="NPCsPath"]
+visible = false
 curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/PutPath2D"]
 position = Vector2( 353, 8 )
-rotation = 3.14159
+rotate = false
 cubic_interp = false
 loop = false
 
@@ -294,11 +295,12 @@ curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/SunniPath2D"]
 position = Vector2( 264, 392 )
-rotation = 7.62398e-06
+rotate = false
 cubic_interp = false
 loop = false
 
 [node name="SalesmanPath2D" type="Path2D" parent="NPCsPath"]
+visible = false
 curve = SubResource( 8 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/SalesmanPath2D"]
@@ -308,6 +310,7 @@ cubic_interp = false
 loop = false
 
 [node name="WatcherPath2D" type="Path2D" parent="NPCsPath"]
+visible = false
 curve = SubResource( 9 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/WatcherPath2D"]

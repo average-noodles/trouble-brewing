@@ -32,7 +32,8 @@ func _process(delta):
 	time = _get_time()
 	_get_date()
 	_set_time(time[0],time[1])
-	#_set_day(game_state_controller.get_data("date_started"))
+	#if not game_state_controller.get_data("glitched"):
+		#_set_day(game_state_controller.get_data("date_started"))
 	
 func _get_time():
 	var datetime = OS.get_datetime()
@@ -78,8 +79,8 @@ func _set_day(start_date):
 
 func _get_total_days(temp_date):
 	var total_days = 0
-	total_days += (temp_date["year"]-1) * 365 + int((temp_date["year"]-1)/4)
-	for i in range(1,temp_date["month"] - 1):
+	total_days += (temp_date["year"]) * 365 + int((temp_date["year"])/4)
+	for i in range(1,temp_date["month"]):
 		if i in [1,3,5,7,8,10,12]:
 			total_days += 31
 		elif i in [4,6,9,11]:
@@ -98,7 +99,7 @@ func get_date():
 	return date
 	
 func set_day(new_day):
-	if new_day < 8 and new_day > 0:
+	if new_day < 15 and new_day > 0:
 		day = new_day
 		clock_days_sprite.set_frame(day - 1)
 

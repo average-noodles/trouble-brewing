@@ -24,8 +24,8 @@ var default_data = {
 	"npcs": {
 		"Betsy": {
 			"time": {
-				"in_time": 0,
-				"out_time": 100000
+				"in_time": 480,
+				"out_time": 750
 			},
 			"final_animation": "IdleRight",
 			"file_location": "res://NPCs/Betsy/Betsy.tscn",
@@ -42,8 +42,8 @@ var default_data = {
 		},
 		"Malcolm": {
 			"time": {
-				"in_time": 0,
-				"out_time": 100000
+				"in_time": 600,
+				"out_time": 900
 			},
 			"final_animation": "IdleLeft",
 			"file_location": "res://NPCs/Malcolm/Malcolm.tscn",
@@ -94,8 +94,8 @@ var default_data = {
 		},
 		"Crow": {
 			"time": {
-				"in_time": 0,
-				"out_time": 100000
+				"in_time": 1200,
+				"out_time": 1439
 			},
 			"final_animation": "IdleDown",
 			"file_location": "res://NPCs/Crow/Crow.tscn",
@@ -112,8 +112,8 @@ var default_data = {
 		},
 		"Velmi": {
 			"time": {
-				"in_time": 0,
-				"out_time": 1000000
+				"in_time": 420,
+				"out_time": 720
 			},
 			"final_animation": "IdleLeft",
 			"file_location": "res://NPCs/Velmi/Velmi.tscn",
@@ -130,8 +130,8 @@ var default_data = {
 		},
 		"Put": {
 			"time": {
-				"in_time": 0,
-				"out_time": 1000000
+				"in_time": 900,
+				"out_time": 1200
 			},
 			"final_animation": "IdleDown",
 			"file_location": "res://NPCs/Put/Put.tscn",
@@ -148,8 +148,8 @@ var default_data = {
 		},
 		"Sunni": {
 			"time": {
-				"in_time": 0,
-				"out_time": 1000000
+				"in_time": 420,
+				"out_time": 720
 			},
 			"final_animation": "IdleLeft",
 			"file_location": "res://NPCs/Sunni/Sunni.tscn",

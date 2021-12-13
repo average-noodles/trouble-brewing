@@ -13,16 +13,18 @@ var exit = false
 
 func _process(delta):
 	if enter:
-		if path_2d.get_unit_offset() < 0.78:
+		if path_2d.get_unit_offset() < 0.534:
 			play_animation("RunUp")
-		elif path_2d.get_unit_offset() >= 0.78 and path_2d.get_unit_offset() < 0.91:
+		elif path_2d.get_unit_offset() >= 0.534 and path_2d.get_unit_offset() < 0.6311:
 			play_animation("RunLeft")
 			if door.get_active():
 				door.play_animation()
-		elif path_2d.get_unit_offset() >= 0.90 and path_2d.get_unit_offset() < 1.00:
+		elif path_2d.get_unit_offset() >= 0.6311 and path_2d.get_unit_offset() < 0.6699:
 			play_animation("RunUp")
-		else:
+		elif path_2d.get_unit_offset() >= 0.6699 and path_2d.get_unit_offset() < 0.9612:
 			play_animation("RunLeft")
+		else:
+			play_animation("RunUp")
 		var newOffset = path_2d.get_offset() + runSpeed * delta
 		path_2d.set_offset(newOffset)
 			
@@ -30,13 +32,17 @@ func _process(delta):
 			enter = false
 			play_animation("IdleLeft")
 	if exit:
-		if path_2d.get_unit_offset() < 0.78:
+		if path_2d.get_unit_offset() < 0.534:
 			play_animation("RunDown")
-		elif path_2d.get_unit_offset() >= 0.78 and path_2d.get_unit_offset() < 0.91:
+		elif path_2d.get_unit_offset() >= 0.534 and path_2d.get_unit_offset() < 0.6311:
 			play_animation("RunRight")
 			if door.get_active():
 				door.play_animation()
-		elif path_2d.get_unit_offset() >= 0.90 and path_2d.get_unit_offset() < 1.00:
+		elif path_2d.get_unit_offset() >= 0.6311 and path_2d.get_unit_offset() < 0.6699:
+			play_animation("RunDown")
+		elif path_2d.get_unit_offset() >= 0.6699 and path_2d.get_unit_offset() < 0.9612:
+			play_animation("RunRight")
+		else:
 			play_animation("RunDown")
 		var newOffset = path_2d.get_offset() - runSpeed * delta
 		path_2d.set_offset(newOffset)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://World/Brightwood Floor.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -22,6 +22,9 @@
 [ext_resource path="res://World/BackDoor.tscn" type="PackedScene" id=20]
 [ext_resource path="res://World/Garden/DirtGarden.tscn" type="PackedScene" id=21]
 [ext_resource path="res://UI/GardenMenu/GardenMenu.tscn" type="PackedScene" id=22]
+[ext_resource path="res://World/Machines/CoffeeMachine.tscn" type="PackedScene" id=23]
+[ext_resource path="res://World/Machines/Computer.tscn" type="PackedScene" id=24]
+[ext_resource path="res://UI/CoffeeMenu/CoffeeMenu.tscn" type="PackedScene" id=25]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -60,7 +63,12 @@ _data = {
 
 [sub_resource type="Curve2D" id=8]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 144, 184, 0, 0, 0, 0, 144, 264 )
+"points": PoolVector2Array( 0, 0, 0, 0, 144, 190, 0, 0, 0, 0, 144, 264 )
+}
+
+[sub_resource type="Curve2D" id=9]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 280, -8, 0, 0, 0, 0, 280, 392, 0, 0, 0, 0, 8, 392, 0, 0, 0, 0, 8, -16, 0, 0, 0, 0, 280, -16 )
 }
 
 [node name="World" type="Node2D"]
@@ -144,6 +152,8 @@ position = Vector2( 232, 328 )
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 148, 162 )
 
+[node name="Computer" parent="YSort" instance=ExtResource( 24 )]
+
 [node name="Counter" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 148, 132 )
 
@@ -152,6 +162,9 @@ position = Vector2( 88, 64 )
 
 [node name="Table2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 184, 64 )
+
+[node name="CoffeeMachine" parent="YSort" instance=ExtResource( 23 )]
+position = Vector2( 89, 136 )
 
 [node name="Table3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 232, 64 )
@@ -187,7 +200,6 @@ margin_right = 288.0
 margin_bottom = 162.0
 
 [node name="Dialog_Player" parent="." instance=ExtResource( 4 )]
-visible = false
 margin_left = 176.0
 margin_top = 178.0
 margin_right = 176.0
@@ -290,13 +302,28 @@ loop = false
 curve = SubResource( 8 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/SalesmanPath2D"]
-position = Vector2( 144, 184 )
+position = Vector2( 144, 190 )
 rotate = false
 cubic_interp = false
 loop = false
+
+[node name="WatcherPath2D" type="Path2D" parent="NPCsPath"]
+curve = SubResource( 9 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="NPCsPath/WatcherPath2D"]
+position = Vector2( 280, -8 )
+rotation = -1.5708
+rotate = false
+cubic_interp = false
 
 [node name="InventoryMenu" parent="." instance=ExtResource( 17 )]
 margin_left = 248.0
 margin_top = 67.0
 margin_right = 248.0
 margin_bottom = 67.0
+
+[node name="CoffeeMenu" parent="." instance=ExtResource( 25 )]
+margin_left = -107.0
+margin_top = 46.0
+margin_right = 213.0
+margin_bottom = 226.0

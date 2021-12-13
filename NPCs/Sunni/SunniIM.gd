@@ -6,6 +6,7 @@ extends InteractionManager
 onready var dialog_player = get_node("/root/World/Dialog_Player")
 onready var clock = get_node("/root/World/Clock")
 onready var game_state_controller = get_node("/root/GameStateController")
+onready var sunni = get_parent()
 
 var dialog = ""
 var interaction_dict = {}
@@ -23,17 +24,29 @@ func _process(delta):
 		game_state_controller.update_data("npcs",npc_name,npc_dict)
 	if game_state_controller.get_data("glitched"):
 		dialog = "glitched_dialog"
+	elif interaction_dict["total_interactions"] == 13:
+		var outcome = npc_dict["outcome"]["Sunni_interaction_7"]
+		dialog = npc_name + "_interaction_" + String(interaction_dict["total_interactions"]) + "_outcome_" + outcome
 	else:
 		dialog = npc_name + "_interaction_" + String(interaction_dict["total_interactions"])
 # Called when the node enters the scene tree for the first time.
 func receive_interaction() -> void:
 	if not interaction_dict["interacted_today"]:
-		dialog_player.play_dialog(dialog, npc_name)
-		interaction_dict["interacted_today"] = true
-		interaction_dict["last_interacted"] = clock.get_day()
-		interaction_dict["total_interactions"] += 1
-		npc_dict["interaction"] = interaction_dict
-		game_state_controller.update_data("npcs",npc_name,npc_dict)
+		if interaction_dict["max_interactions"] >= interaction_dict["total_interactions"]:
+			dialog_player.play_dialog(dialog,npc_name)
+			interaction_dict["interacted_today"] = true
+			interaction_dict["last_interacted"] = clock.get_day()
+			interaction_dict["total_interactions"] += 1
+			npc_dict["interaction"] = interaction_dict
+			game_state_controller.update_data("npcs",npc_name,npc_dict)
+		else:
+			dialog_player.play_dialog("no_dialog_dialog",npc_name)
+	if interaction_dict["total_interactions"] > 14:
+		var npcs = game_state_controller.get_data("npcs")
+		npcs.delete(npc_name)
+		game_state_controller.set_data("npcs",npcs)
+		sunni.queue_free()
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://NPCs/Watcher/WatcherPathFollow2D.gd" type="Script" id=1]
+[ext_resource path="res://NPCs/Watcher/Watcher-Sheet.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.72313
+height = 3.93556
+
+[sub_resource type="Animation" id=2]
+resource_name = "Float"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("WatcherSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[node name="WatcherKinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="WatcherSprite" type="Sprite" parent="."]
+position = Vector2( 0.154121, -6.95369 )
+texture = ExtResource( 2 )
+hframes = 8
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Float = SubResource( 2 )

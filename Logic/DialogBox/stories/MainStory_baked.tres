@@ -644,7 +644,7 @@ story = {
 0: 7
 },
 "text": "<speaker>Malcolm</speaker>
-<dialog>What do you mean I don't wear clothes? I am wearing clothes right now. Is everything alright <variable>name</variable></dialog>"
+<dialog>What do you mean I don't wear clothes? I am wearing clothes right now. Is everything alright <variable>name</variable>.</dialog>"
 },
 7: {
 "links": {
@@ -1086,7 +1086,7 @@ story = {
 1: 4
 },
 "text": "<speaker>Sunni</speaker>
-<dialog>Hey <variable>name<variable>? Can I vent to you for a second?</dialog>
+<dialog>Hey <variable>name</variable>? Can I vent to you for a second?</dialog>
 <choiceJSON>{\"Yeah, what's up?\":0,\"Sorry, I am pretty busy.\":1}</choiceJSON>"
 },
 3: {
@@ -1117,7 +1117,7 @@ story = {
 0: 5
 },
 "text": "<speaker>Sunni</speaker>
-<dialog>You're probably right. Maybe she just needs some space. Thanks <variable>username<variable>!</dialog>
+<dialog>You're probably right. Maybe she just needs some space. Thanks <variable>username</variable>!</dialog>
 <outcome>1</outcome>"
 },
 7: {
@@ -1188,7 +1188,7 @@ story = {
 "links": {
 0: 3
 },
-"text": "<speaker>Sunni<speaker>
+"text": "<speaker>Sunni</speaker>
 <dialog>Y'know there are a lot of good hiking trails around Prometheus. We should go hiking together sometime!</dialog>"
 },
 3: {
@@ -1312,7 +1312,7 @@ story = {
 0: 6
 },
 "text": "<speaker>Put</speaker>
-<dialog>Y'know what? Props for liking the bad one, dude.</dialog"
+<dialog>Y'know what? Props for liking the bad one, dude.</dialog>"
 },
 6: {
 "links": {
@@ -1484,23 +1484,947 @@ story = {
 "text": "<end>"
 }
 }
+},
+46: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3,
+1: 3,
+2: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>What do you really do for a living <variable>username</variable>?</dialog>
+<choiceJSON>{\"Job\":0,\"Job2\":1,\"Job3\":2}</choiceJSON>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>*sigh* I should have know you wouldn't be able to respond to that with a real answer.</dialog>"
+},
+4: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+47: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>I am not really in the mood to be speaking with you right now.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+48: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3,
+1: 4
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>You know your time is limited here?</dialog>
+<choiceJSON>{\"Yes\":0,\"No\":1}</choiceJSON>"
+},
+3: {
+"links": {
+0: 5
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>Good. You should be ready to depart soon. Time is almost up. </dialog>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>You don't get a choice in the matter. The game won't allow it.</dialog>"
+},
+5: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+49: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>Don't you have something better to do right now?</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+50: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>There were others before you. Hundreds upon thousands. They are gone now, and soon so shall you.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+51: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>All of this is inevitable. You didn't have a choice, not really.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+52: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>The Crow</speaker>
+<dialog>I am afraid this is it <variable>username</variable>. Don't come back ok? There's nothing left for you except ghosts passing through the night pretending to be human.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+53: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog><variable>name</variable>! I just wanted to say you were completely right about playing a paladin. This last session, I casted find steed in a tavern and chaos ensued.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+54: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog><variable>name</variable>! I just wanted to say you were completely right about playing a rogue. I went with arcane trickster, and the amount of damage I can cause with sneak attack, a short sword, and booming blade is insane.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+55: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog><variable>name</variable>! I just wanted to say you were completely right about playing a warlock. I also multiclassed into paladin, so now I can hide in magical darkness and beat the shit out of people.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+56: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Have you met the Crow yet <variable>name</variable>? They are a really strange individual. Always speaking so cryptically. I wonder what their deal is.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+57: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Sorry, I can't speak right now. I have a huge calculas test coming up that I really need to study for.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+58: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Ugh, another terrible book! When will they end!?</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "end"
+}
+}
+},
+59: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog><variable>name</variable>! Just who I was looking to see! I started writing a novel!</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>...well it's more like a short story right now. I figured I should start small and move it up from there, but I've hit a bit of a snag...</dialog>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>...see I haven't actually ever been in a relationship... so I like don't know how to write about one. Uh this is awkward...</dialog>"
+},
+5: {
+"links": {
+0: 6,
+1: 10
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>I guess I need help. Do you have any romantic experiences you would mind sharing? Completelyfineifyoudon'thaveanyorwanttoshare!</dialog>
+<choiceJSON>{\"Why don't you get a girlfriend?\":0,\"Nope, sorry Velmi...\":1}</choiceJSON>"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>ME! GET A GIRLFRIEND!</dialog>"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>ImeanIamjustnotlikeinterestedinanyoneinPrometheuslikethatandevenifIwasItotallywouldn'tbesittingonetabledownfromthem. *Velmi starts nervously laughing*</dialog>"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Well thanks for your help <variable>name</variable>. I have to go now... and probably scream into a pillow...</dialog>"
+},
+9: {
+"links": {
+
+},
+"text": "<end>"
+},
+10: {
+"links": {
+0: 9
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Ah dang. Well thanks for talking to me. Sorry about being and awkward mess.</dialog>"
+}
+}
+},
+60: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3,
+1: 3,
+2: 3
+},
+"text": "<speaker>Imlev</speaker>
+<dialog><variable>name<variable> how are you doing?</dialog>
+<choiceJSON>{\"Doog\":0,\"Ko\":1,\"hhhhhe\":2}</choiceJSON>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+61: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>I could really use a nap. I didn't sleep so well last night. I had to pull an all nighter for one of my classes.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+62: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Velmi</speaker>
+<dialog>Goodbye...</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+63: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3,
+1: 3,
+2: 3
+},
+"text": "<speaker>Malcolm</speaker>
+<dialog><variable>name</variable>! I started using a new mustache cream. What do you think?</dialog>
+<choiceJSON>{\"I hate it\":0,\"I hate it\":1,\"I hate it\":2}</choiceJSON>
+"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Malcolm</speaker>
+<dialog>That is very rude <variable>username</variable>. I don't think I will be coming back to this establishment.</dialog>"
+},
+4: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+64: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Betsy</speaker>
+<dialog>You haven't seen put today have you? No? That's unfortunate...</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+65: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Betsy</speaker>
+<dialog>Put and I got into a bit of an argument a few days ago. I think he has moved out with his friend Morton. Oooh I feel so bad about it.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+66: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Betsy</speaker>
+<dialog>Y'know are town should really go about electing a mayor. We have been without one for so long. What do you mean we have a mayor named Malcolm. That's simply not true.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+67: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Betsy</speaker>
+<dialog>Goodbye...</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+68: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Put</speaker>
+<dialog>Hey can you not tell my mom when I am in here. Thanks.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+69: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Put</speaker>
+<dialog>Did you know that the world use to be ruled by creatures called humus, or was it humans. I can't remember. Morton told me about them. Apparently, you can still find their ruins everywhere you go. Eerie.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+70: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Put</speaker>
+<dialog>I got a bad feeling about tomorrow.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+71: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Isabelle</speaker>
+<dialog>...</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+72: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>Not right now <variable>name</variable>. I gotta beat this level first.</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+73: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>You know this place could use a little bit more greenary. If you get time, you should swing by my store. We recently added a garden section!</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+74: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>*Sunni is humming to herself while she doodles in a notebook*</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+75: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3,
+1: 4
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>*Sunni is peering over her shoulder not so subtly*</dialog>
+<choiceJSON>{\"Hey Sunni!\":0,\"*remain silent*\":1}</choiceJSON>"
+},
+3: {
+"links": {
+0: 5
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>AH!</dialog>"
+},
+4: {
+"links": {
+0: 6
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>*Sunni lets out a content sigh*</dialog>"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>I wasn't looking at anyone!</dialog>"
+},
+6: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+76: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>01010011 01110101 01101110 01101110 01101001</speaker>
+<dialog>01001001 00100000 01101100 01101001 01101011 01100101 00100000 01010110 01100101 01101100 01101101 01101001 00001010</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+77: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>Hey <variable>name</variable>. Can I ask you for some advice?</dialog>"
+},
+3: {
+"links": {
+0: 4,
+1: 4,
+2: 4
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>Do you think if I asked Velmi out she would say yes?</dialog>
+<choiceJSON>{\"Yes\":0,\"Yes\":1,\"Yes\":2}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>Thanks, I am gonna go do it rig........</dialog>"
+},
+5: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+78: {
+"nodes": {
+1: {
+"links": {
+0: 3
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>So Velmi is still acting weird. Ugh, I hate this.</dialog>"
+},
+2: {
+"links": {
+0: 1
+},
+"text": "<start>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+79: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Sunni</speaker>
+<dialog>Oh hey... I don't feel so good...</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
 }
 }
 names = {
 "Betsy_interaction_1": 22,
+"Betsy_interaction_10": 66,
+"Betsy_interaction_11": 67,
 "Betsy_interaction_2": 23,
 "Betsy_interaction_3": 24,
 "Betsy_interaction_4": 25,
 "Betsy_interaction_5": 26,
 "Betsy_interaction_6": 27,
 "Betsy_interaction_7": 28,
+"Betsy_interaction_8": 64,
+"Betsy_interaction_9": 65,
 "Crow_interaction_1": 8,
+"Crow_interaction_10": 48,
+"Crow_interaction_11": 49,
+"Crow_interaction_12": 50,
+"Crow_interaction_13": 51,
+"Crow_interaction_14": 52,
 "Crow_interaction_2": 9,
 "Crow_interaction_3": 10,
 "Crow_interaction_4": 11,
 "Crow_interaction_5": 12,
 "Crow_interaction_6": 13,
 "Crow_interaction_7": 14,
+"Crow_interaction_8": 46,
+"Crow_interaction_9": 47,
 "Malcolm_interaction_1": 15,
 "Malcolm_interaction_2": 16,
 "Malcolm_interaction_3": 17,
@@ -1508,28 +2432,51 @@ names = {
 "Malcolm_interaction_5": 19,
 "Malcolm_interaction_6": 20,
 "Malcolm_interaction_7": 21,
+"Malcolm_interaction_8": 63,
 "Put_interaction_1": 36,
+"Put_interaction_10": 70,
 "Put_interaction_2": 37,
 "Put_interaction_3": 38,
 "Put_interaction_4": 39,
 "Put_interaction_5": 40,
 "Put_interaction_6": 41,
 "Put_interaction_7": 42,
+"Put_interaction_8": 68,
+"Put_interaction_9": 69,
 "Salesman_interaction": 45,
 "Sunni_interaction_1": 29,
+"Sunni_interaction_10": 74,
+"Sunni_interaction_11": 75,
+"Sunni_interaction_12": 76,
+"Sunni_interaction_13_outcome_0": 77,
+"Sunni_interaction_13_outcome_1": 78,
+"Sunni_interaction_13_outcome_2": 79,
 "Sunni_interaction_2": 30,
 "Sunni_interaction_3": 31,
 "Sunni_interaction_4": 33,
 "Sunni_interaction_5": 34,
 "Sunni_interaction_6": 35,
 "Sunni_interaction_7": 32,
+"Sunni_interaction_8": 72,
+"Sunni_interaction_9": 73,
 "Velmi_interaction_1": 1,
+"Velmi_interaction_10": 57,
+"Velmi_interaction_11_outcome_0": 59,
+"Velmi_interaction_11_outcome_1": 58,
+"Velmi_interaction_12": 60,
+"Velmi_interaction_13": 61,
+"Velmi_interaction_14": 62,
 "Velmi_interaction_2": 2,
 "Velmi_interaction_3": 3,
 "Velmi_interaction_4": 4,
 "Velmi_interaction_5": 5,
 "Velmi_interaction_6": 6,
 "Velmi_interaction_7": 7,
+"Velmi_interaction_8_outcome_0": 53,
+"Velmi_interaction_8_outcome_1": 54,
+"Velmi_interaction_8_outcome_2": 55,
+"Velmi_interaction_9": 56,
 "crow_glitched_dialog": 44,
-"glitched_dialog": 43
+"glitched_dialog": 43,
+"no_dialog_dialog": 71
 }

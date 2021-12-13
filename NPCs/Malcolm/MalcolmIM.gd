@@ -26,14 +26,20 @@ func _process(delta):
 	else:
 		dialog = npc_name + "_interaction_" + String(interaction_dict["total_interactions"])
 # Called when the node enters the scene tree for the first time.
+
 func receive_interaction() -> void:
 	if not interaction_dict["interacted_today"]:
-		dialog_player.play_dialog(dialog,npc_name)
-		interaction_dict["interacted_today"] = true
-		interaction_dict["last_interacted"] = clock.get_day()
-		interaction_dict["total_interactions"] += 1
-		npc_dict["interaction"] = interaction_dict
-		game_state_controller.update_data("npcs",npc_name,npc_dict)
+		if interaction_dict["max_interactions"] >= interaction_dict["total_interactions"]:
+			dialog_player.play_dialog(dialog,npc_name)
+			interaction_dict["interacted_today"] = true
+			interaction_dict["last_interacted"] = clock.get_day()
+			interaction_dict["total_interactions"] += 1
+			if interaction_dict["total_interactions"] > 8:
+				npc_dict["days_in_shop"] == []
+			npc_dict["interaction"] = interaction_dict
+			game_state_controller.update_data("npcs",npc_name,npc_dict)
+		else:
+			dialog_player.play_dialog("no_dialog_dialog",npc_name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
